@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FetchAllBooking from './Component/FetchAllBooking';
+import FetchBookingById from './Component/FetchBookingById';
+import NavBar from './Component/NavBar';
+import Footer from './Component/Footer';
+import AddBooking from './Component/AddBooking';
+import UpdateBooking from './Component/UpdateBooking';
+import DeleteBooking from './Component/DeleteBooking';
+import Slideshow from './Component/Slideshow';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>  
+      <NavBar />
+      {/* <h4>Welcome Dealer</h4> */}
+      {/* <hr></hr> */}
+      <Slideshow
+        interval={3000}
+        images={[
+          // './images/car.jpg',
+          '/images/car1.jpg',
+          '/images/car2.jpg',
+          '/images/car3.jpg',
+          // './images/car4.jpg',
+          // './images/images.jpg'
+        ]}
+      />
+      {/* <hr></hr> */}
+      <Router>
+        <Routes>
+          <Route path="/Booking/all" element={<FetchAllBooking />} exact />
+          <Route path="/Booking/:bookingId" element={<FetchBookingById />} exact />
+          <Route path="/Booking/addnew" element={<AddBooking />} exact />
+          <Route path="/Booking/update/:bookingId" element={<UpdateBooking />} exact />
+          <Route path="/Booking/delete/:bookingId" element={<DeleteBooking />} exact />
+        </Routes>
+      </Router>
+      <Footer />
     </div>
   );
 }
