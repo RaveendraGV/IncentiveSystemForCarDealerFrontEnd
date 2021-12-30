@@ -13,24 +13,18 @@ import Slideshow from './Component/Slideshow';
 
 function App() {
   return (
-    <div className='App'>  
+    <div className='App'>
       <NavBar />
-      {/* <h4>Welcome Dealer</h4> */}
-      {/* <hr></hr> */}
-      <Slideshow
-        interval={3000}
-        images={[
-          // './images/car.jpg',
-          '/images/car1.jpg',
-          '/images/car2.jpg',
-          '/images/car3.jpg',
-          // './images/car4.jpg',
-          // './images/images.jpg'
-        ]}
-      />
-      {/* <hr></hr> */}
       <Router>
         <Routes>
+          <Route path="" element={<Slideshow
+            interval={3000}
+            images={[
+              '/images/car1.jpg',
+              '/images/car2.jpg',
+              '/images/car3.jpg',
+            ]}
+          />} exact />
           <Route path="/Booking/all" element={<FetchAllBooking />} exact />
           <Route path="/Booking/:bookingId" element={<FetchBookingById />} exact />
           <Route path="/Booking/addnew" element={<AddBooking />} exact />

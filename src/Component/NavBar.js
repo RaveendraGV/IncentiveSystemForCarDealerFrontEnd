@@ -21,7 +21,7 @@ function NavBar() {
           </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="/Booking/addnew">Add New Booking</a>
-            <a class="dropdown-item" href="/Booking/all">Check All Booking</a>           
+            <a class="dropdown-item" href="/Booking/all">Check All Booking</a>
           </div>
         </li>
         <button class="btn btn-dark btn-floating btn-sm" type="button">Logout</button>

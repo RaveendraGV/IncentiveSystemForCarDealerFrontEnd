@@ -1,5 +1,4 @@
 .App {
-  /* background-color: lightgreen; */
   text-align: center;
 }
 
@@ -44,28 +43,11 @@
   max-width: fit-content;
   align-items: left;
 }
-/* foooter */
-/* .footer{
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: rgba(0, 0, 255, 0.644);
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-} */
+
 
 .cp-text{ color: rgba(182, 180, 180, 0.856); text-shadow: 0 1px rgba(182, 180, 180, 0.856);}
 
-/* form */
-/* .form{
-  width: 57%;
-  display: flex;
-  justify-content: right;
-  text-align: left;
 
-} */
 #nav{
   background-color: #0070ad;
 }
@@ -79,5 +61,25 @@ div.container{
   justify-content: center;
   text-align: left;
   position: center;
+  padding-bottom: 20px;
 }
 
+.allbooking{
+  padding-top: 20px;
+  height: 359px;
+  text-align: left;
+}
+
+.deletebooking{
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.tablehead{
+  color: #fff;
+  background-color: #0070ad;
+}
+
+.deletebookingbutton{
+  padding-bottom: 20px;
+}
